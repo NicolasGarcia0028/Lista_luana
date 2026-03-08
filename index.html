@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Para la mas viral</title>
+  <meta name="description" content="Una carta donde te describo a ti lo que veo en ti." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Fondo y efectos -->
+  <canvas id="fx-canvas" aria-hidden="true"></canvas>
+
+  <!-- Música de fondo -->
+  <audio id="bg-music" src="./assets/Better in Stereo (Theme Song Version).mp3" loop></audio>
+
+  <main class="container">
+    <!-- Stickers GIF decorativos -->
+    <div class="stickers" aria-hidden="true">
+      <img src="./assets/lola.gif" alt="" class="sticker sticker-1" />
+      <img src="./assets/descendientes.gif" alt="" class="sticker sticker-2" />
+      <img src="./assets/remi.gif" alt="" class="sticker sticker-3" />
+      <img src="./assets/0f1858a6fec3beeeaf0e119763303a9d.gif" alt="" class="sticker sticker-4" />
+      <img src="./assets/snoppy.gif" alt="" class="sticker sticker-5" />
+    </div>
+    <div class="content-wrapper">
+      <div class="header">
+  <h1 class="dear-title">Feliz dia de la <span class="special-name floating">Mujer</span></h1>
+      </div>
+
+      <!-- Sobre mejorado -->
+      <div class="envelope-wrapper" id="envelope-wrapper" title="Haz clic para abrir">
+        <div class="envelope" id="envelope" aria-expanded="false" aria-controls="fullscreen-letter" role="button" tabindex="0">
+          <div class="envelope-front">
+            <div class="envelope-flap"></div>
+            <i class="fas fa-heart" aria-hidden="true" style="color: white; font-size: 2.2rem;"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Control de música debajo de la carta -->
+      <div class="music-control-area">
+        <button id="music-toggle" aria-label="Reproducir/Pausar música" class="music-btn">
+          <span id="music-icon" class="music-icon">&#9835;</span>
+        </button>
+        <div class="music-hint">
+          <span class="music-hint-emoji">🎶</span>
+          <span class="music-hint-text">Abre la carta para que se reprodesca la cancion si te cansas de ella dale click en 🎵</span>
+        </div>
+      </div>
+    </div>
+
+    
+  </main>
+
+  <!-- Carta a pantalla completa -->
+  <div class="fullscreen-letter" id="fullscreen-letter" role="dialog" aria-modal="true" aria-labelledby="letter-title" hidden>
+    <button class="close-btn" id="close-btn" aria-label="Cerrar carta">×</button>
+    <div class="fullscreen-letter-content">
+      <h2 id="letter-title">  Carissima e mia bella signora</h2>
+      <p>
+        Por dónde empezar, lo primero, feliz día;<br />
+        creo que no hay mejor forma de darte ese reconocimiento que el describir cómo te perciben mis ojos y mi percepción de quién es Luana Sofía. 
+      </p>
+      <p>
+        —Tienes un gran carácter, me gusta el hecho de que mantengas tus principios y en tu ley, dice mucho de ti
+      </p>
+      <p>
+        —Eres centrada, sabes lo que quieres y te enfocas en conseguirlo.
+      </p>
+      <p>
+        —Eres lista, inteligente y creativa; el tener una pasión por una carrera tan compleja es muy admirable porque se nota el empeño y el entusiasmo que le das.
+      </p>
+      <p>
+        —Guardas mucha inocencia en el sentido de que, a pesar de tu forma estricta, tienes esos comportamientos de niña consentida y es tierno.
+      </p>
+      <p>
+        —Eres fuerte mentalmente; creo que la fuerza no es la que aísla los sentimientos, sino la que, aun destruido y con cargas encima, sigues avanzando.
+      </p>
+      <p>
+        <p>
+        —Tu ternura es envidiable, el pensar lo que haces por alguien que te interesa y esa forma tan dulce de hacerlo es algo que envidiaría de quien lo recibe de ti.
+      </p>
+      <p>
+        —Eres frentera ante las adversidades; sé que no saldrías corriendo al primer problema que se te presente y lo encararías con seguridad.
+      </p>
+      <p>
+        —Eres sociable, pero también guardas esa selectividad donde poca gente conoce ese lado vulnerable de ti.     
+       </p>
+      <p>
+        —Tus ocurrencias son las mejores, tienes un don para hacer sentir bien o sacarle una sonrisa a las personas, aunque no estén de buen humor.     
+       </p>
+      <p>
+        —Eres justa, sé que no le harías daño a una persona por gusto propio, ya que ves a las personas como un igual, nunca por encima del hombro.      
+      </p>
+      <p>
+       —Eres interesante; tus gustos, tu forma de expresarte, no escondes lo que eres y eso te hace resaltar como un libro donde en cada capítulo mejora cada vez más.      </p>
+      </p>
+      <p>
+       —Eres emocional, lo que te hace propensa a guardar con dolor las cosas negativas; están muy presentes, pero también las positivas las guardas con mucha ilusión. Esos detalles únicos que plasmas cuando hablas de un momento o un lindo recuerdo reflejan un corazón intenso.      </p>
+      </p>
+      <p>
+       -Si hablamos físicamente, eres muy linda, Me gusta tu altura, tienes unos ojos que representan el atardecer, pero también profundos que te sumergen como el océano, una sonrisa hipnótica que provoca sonreírte de vuelta, tienes un tacto suave que a pesar de tu hiperactividad es bastante cálido, tus cachetes me parecen tiernos como para tenerlos entre mis manos y darles un beso y sin ser irrespetuoso tienes un lindo cuerpo.
+      </p>
+      <p>
+       -Tienes mucho arte, como la Capilla Sixtina o La noche estrellada de Van Gogh.
+      </p>
+       <p>
+       Eres una gran mujer, una casualidad que no pasa desapercibida como un tulipán en un campo de girasoles, una mezcla perfecta entre sensualidad y ternura, aunque aun me falta conocerte mucho más, sé que tienes un corazón inmenso y aunque tengas seguridad en ti misma, nunca olvides que siempre serás valerosa, te sobrepondrás ante cualquier dificultad para lograr tus metas y sobre todo si sirve de algo leer mil veces esta carte para recordar lo que eres ante los ojos de alguien que te ve como una        </p>
+      </p>
+      <h2 id="letter-title"> bella aurora boreal</h2>
+    </div>
+  </div>
+
+  <!-- Corazones DOM -->
+  <div class="hearts-container" id="hearts-container"></div>
+  <div class="floating-hearts" id="floating-hearts"></div>
+
+  <script src="./script.js" defer></script>
+  <script>
+    const music = document.getElementById('bg-music');
+    const btn = document.getElementById('music-toggle');
+    const icon = document.getElementById('music-icon');
+    const hint = document.querySelector('.music-hint');
+    let playing = false;
+    function updateIcon() {
+      icon.classList.toggle('playing', playing);
+    }
+    function playMusic() {
+      if (music.paused) {
+        music.play().then(()=>{
+          playing = true;
+          updateIcon();
+        }).catch(()=>{});
+      }
+    }
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (music.paused) {
+        music.play();
+        playing = true;
+      } else {
+        music.pause();
+        playing = false;
+      }
+      updateIcon();
+    });
+    // Autoplay tras primer interacción en cualquier parte
+    function tryAutoplay() {
+      playMusic();
+      hint.style.opacity = '0.3';
+      window.removeEventListener('pointerdown', tryAutoplay);
+      window.removeEventListener('keydown', tryAutoplay);
+    }
+    window.addEventListener('pointerdown', tryAutoplay);
+    window.addEventListener('keydown', tryAutoplay);
+    updateIcon();
+  </script>
+</body>
+</html>
